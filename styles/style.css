@@ -153,15 +153,19 @@ main {
 }
 
 
-/*--------------- Media Queary -------------*/
+/*------------------ Media Queary for mobile device ------------------*/
 
 @media screen and (max-width: 576px) {
     .navbar, .nav-links, .team-feature {
         flex-direction: column;
     }
+    .team-feature {
+        flex-direction: column-reverse;
+    }
     .nav-links {
         gap: 30px;
         align-items: center;
+        padding: 0;
     }
     .brand {
         font-weight: 900;
@@ -187,6 +191,7 @@ main {
         grid-template-columns: 1fr;
         justify-items: center;
         gap: 20px;
+        padding: 20px 0;
     }
     .features {
         text-align: center;
@@ -206,5 +211,71 @@ main {
         font-size: 1.2rem;
         text-align: justify;
         margin: 0 50px;
+    }
+}
+
+/* ---------------- Media Queary for medium device ------------------- */
+/* @media only screen and (min-width: 769px) and (max-width: 1281px) */
+
+@media screen and (min-width: 577px) and (max-width: 920px ) {
+    .navbar, .nav-links {
+        flex-direction: column;
+    }
+    .team-feature {
+        flex-direction: column-reverse;
+    }
+    .teams {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .nav-links {
+        gap: 30px;
+        align-items: center;
+        padding: 0;
+    }
+    .brand {
+        font-weight: 900;
+        font-size: 2rem;
+    }
+    .banner-title {
+        font-size: 3rem;
+        font-weight: 900;
+        padding: 0 10px;
+    }
+    .banner-content {
+        text-align: center;
+        margin-bottom: 50px;
+        padding: 0 10px;
+    }
+    .banner {
+        padding-bottom: 30px;
+    }
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 20px;
+        max-width: 540px;
+        margin: 20px auto;
+        padding: 0;
+    }
+    .features {
+        text-align: center;
+    }
+    .features p {
+        text-align: justify;
+    }
+    .facts-text-container {
+        text-align: center;
+    }
+    .facts-title {
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
+    .facts-text {
+        font-size: 1.2rem;
+        text-align: justify;
+        margin: 0 auto;
     }
 }
