@@ -152,6 +152,35 @@ main {
     color: #424242;
 }
 
+.sponsor-info {
+    max-width: 540px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+.sponsor-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #1d1d1d;
+    margin: 0;
+    padding: .7rem 0;
+}
+.sponsor-text {
+    font-size: 1.1rem;
+    color: #424242;
+    line-height: 1.6rem;
+}
+.sponsor-img {
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsor-img img {
+    filter: grayscale(100%);
+}
+.sponsor-img img:hover {
+    cursor: pointer;
+    filter: none;
+}
 
 /*------------------ Media Queary for mobile device ------------------*/
 
@@ -211,6 +240,22 @@ main {
         font-size: 1.2rem;
         text-align: justify;
         margin: 0 50px;
+    }
+
+    .sponsor-img {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        justify-items: center;
+    }
+    .sponsor-title {
+        margin: 0;
+        padding: .7rem 0;
+    }
+    .sponsor-text {
+        margin: 10px 50px;
+        line-height: 1.6rem;
+        font-size: 1.2rem;
+        text-align: justify;
     }
 }
 
@@ -277,5 +322,15 @@ main {
         font-size: 1.2rem;
         text-align: justify;
         margin: 0 auto;
+    }
+    .sponsor-img {
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+        gap: 50px 0;
+    }
+    .sponsor-text {
+        line-height: 1.6rem;
+        text-align: justify;
     }
 }
